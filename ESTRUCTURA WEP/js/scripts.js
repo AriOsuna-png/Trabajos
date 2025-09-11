@@ -10,7 +10,7 @@ Crea un programa en javascript que cumpla con lo siguiente:
 3. Llama a la funcion imprimirNombres para mostrar todos los nombres. */
 
 
-const grupo = [
+let grupo = [
     {
         nombre: "Ari",
         apellido: "Osuna"
@@ -54,10 +54,16 @@ const grupo = [
 
 ]
 
-function imprimeNombres(){
+function listaNombres(){
+    let lista = document.getElementById("lista");
+    lista.innerHTML
 
-    console.log(grupo)
+    for(let i = 0; i < grupo.length; i++){
+        let li = document.createElement("li");
+        li.textContent = grupo[i].nombre + " " + grupo[i].apellido
+        lista.appendChild(li);
+    }
+    
 
 }
 
-imprimeNombres()
